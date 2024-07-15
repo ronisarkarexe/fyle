@@ -56,3 +56,12 @@ pytest -vvv -s tests/
 # pytest --cov
 # open htmlcov/index.html
 ```
+
+
+1. virtualenv env --python=python3.8
+2. .\env\Scripts\activate
+3. pip install -r requirements.txt
+4. $env:FLASK_APP = "core/server.py"
+5. rm core/store.sqlite3 (optional)
+6. flask db upgrade -d core/migrations/
+7. flask run --host=127.0.0.1 --port=8000
